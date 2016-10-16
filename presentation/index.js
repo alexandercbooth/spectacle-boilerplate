@@ -41,7 +41,8 @@ const theme = createTheme({
   tertiary: "#A6E22E",
   secondary: "#66D9EF",
   quart: "#FD971F",
-  pent: "#AE81FF"
+  pent: "#AE81FF",
+  bgColor: "black"
 
 });
 
@@ -50,7 +51,7 @@ export default class Presentation extends React.Component {
     return (
       <Spectacle theme={theme}>
         <Deck controls="false" progress="pacman" transition={["spin", "fade"]} transitionDuration={500}>
-          <Slide bgColor="black">
+          <Slide>
             <Heading size={2} fit caps lineHeight={1} textColor="primary">
               Terminal or:
             </Heading>
@@ -62,9 +63,17 @@ export default class Presentation extends React.Component {
             </Text>
           </Slide>
 
-          <Slide bgColor="black">
+          <Slide>
+          </Slide>
+
+          <Slide>
             <Text textColor="tertiary"></Text>
-            <iframe src="http://greasy-flag.surge.sh/" frameborder="0" height="500" width="700"/>
+            <iframe src="http://greasy-flag.surge.sh/" frameborder="0" height="480" width="750"/>
+          </Slide>
+
+          <Slide>
+            <Text textColor="tertiary"></Text>
+            <iframe src="http://greasy-flag.surge.sh/02" frameborder="0" height="480" width="750"/>
           </Slide>
         </Deck>
       </Spectacle>
